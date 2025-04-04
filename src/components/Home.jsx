@@ -7,13 +7,16 @@ const Home = () => {
   const [enhancedImage, setEnhancedImage] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const uploadImageHandler = (file) =>{
+  const uploadImageHandler = async (file) => {
     setUpload(URL.createObjectURL(file));
-    setLoading(true)
+    setLoading(true);
 
-    // call the API to enhance the image
-    
-  }
+    try {
+      //code which may produce errors
+    } catch (error) {
+      //code to handle the error and show message
+    }
+  };
 
   return (
     <>
